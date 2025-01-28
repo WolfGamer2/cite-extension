@@ -1,0 +1,4 @@
+console.log("Cleaned Article Text Length:", cleanArticleText.length);
+console.log("Cleaned Summarized Text:", cleanSummarizedText);
+console.log("Match Index:", matchIndex);
+console.log("Generated Citation:", citation);
