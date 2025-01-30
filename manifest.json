@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Percentile Citation Tool",
+  "version": "1.0",
+  "description": "Generate citations with percentile locations for web articles.",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "contextMenus",
+    "clipboardWrite",
+    "scripting",
+    "tabs",
+    "webNavigation"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.jpeg"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
